@@ -1,0 +1,16 @@
+image: docker:latest
+
+services:
+  - name: docker:dind
+    command: ["--insecure-registry=registry.tina.ctg.lu:80"]
+
+variables:
+  CONTAINER_IMAGE: registry.tina.ctg.lu:80/$CI_PROJECT_NAME
+build:
+  stage: build
+
+  script:
+    - docker pull $CONTAINER_IMAGE:latest || true
+    - docker build --cache-from $CONTAINER_IMAGE:latest --tag $CONTAINER_IMAGE:$CI_COMMIT_SHA --tag $CONTAINER_IMAGE:latest .
+    - docker push $CONTAINER_IMAGE:$CI_COMMIT_SHA
+    - docker push $CONTAINER_IMAGE:latest

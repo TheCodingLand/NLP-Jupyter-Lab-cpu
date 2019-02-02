@@ -1,0 +1,46 @@
+#base
+notebook1==6.0.0.dev1
+jupyterhub==0.9.4
+jupyterlab==0.35.4
+jupyterhub-ldapauthenticator==1.2.2
+# AI Gym requirements
+#PyOpenGL
+#piglet
+#pyglet
+
+# Other
+#JSAnimation
+
+ipywidgets
+
+#GYM ALL
+#gym
+
+#gym[atari]
+#gym[box2d]
+#gym[classic_control]
+
+# TINA
+pymongo
+xlwt
+seaborn
+requests
+sklearn
+xlrd
+flask
+redis
+
+#msgpack-python==0.5.4
+xgboost
+graphviz
+
+#spacy
+nltk
+statsmodels
+ipywidgets
+h5py
+sympy
+beautifulsoup4
+protobuf
+xlrd
+keras
